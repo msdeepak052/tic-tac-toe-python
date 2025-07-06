@@ -25,5 +25,8 @@ COPY --from=builder /usr/local/lib/python3.9/site-packages /usr/local/lib/python
 # Copy application files
 COPY --from=builder /app /app
 
+# EXPOSE APPLICATION
+EXPOSE 5000
+
 # Use the correct Python binary in Alpine
 CMD ["python3", "app.py"]
